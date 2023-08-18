@@ -1,0 +1,16 @@
+﻿@page
+@model BlogRazor.Pages.Blogs.CreateCommentModel
+@{
+    ViewData["Title"] = "Create Comment";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Comment.Text"></label>
+        <input asp-for="Comment.Text" class="form-control" />
+        <span asp-validation-for="Comment.Text" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Comment</button>
+</form>
